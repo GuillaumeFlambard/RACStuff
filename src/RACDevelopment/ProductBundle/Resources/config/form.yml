@@ -1,0 +1,10 @@
+parameters:
+    rac_development.product.form.type.product.class: RACDevelopment\ProductBundle\Form\ProductType
+
+services:
+    rac_development.product.form.type.product:
+        class: RACDevelopment\ProductBundle\Form\ProductType
+        arguments: [ @service_container ]
+        tags:
+              - { name: form.type, alias: racdevelopment_productbundle_producttype }
+

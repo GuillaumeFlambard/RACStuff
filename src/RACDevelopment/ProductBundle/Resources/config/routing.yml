@@ -1,0 +1,3 @@
+rac_development_product:
+    resource: "@RACDevelopmentProductBundle/Resources/config/routing/product.yml"
+    prefix: /

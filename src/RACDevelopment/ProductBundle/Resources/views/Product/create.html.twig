@@ -1,0 +1,5 @@
+<form action="{{ path(route) }}" method="post" {{ form_enctype(form) }} novalidate="novalidate">
+    {{ form_errors(form) }}
+    {{ form_row(form) }}
+    <input type="submit" value="Envoyez le formulaire"/>
+</form>

@@ -1,0 +1,7 @@
+rac_development_product_index:
+    pattern:  /
+    defaults: { _controller: RACDevelopmentProductBundle:Product:index }
+
+rac_development_product_create:
+    pattern:  /create
+    defaults: { _controller: RACDevelopmentProductBundle:Product:create }
