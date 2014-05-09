@@ -3,6 +3,7 @@
 namespace RACDevelopment\ProductBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Product
@@ -24,52 +25,65 @@ class Product
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=255)
+     * @Assert\NotBlank(message="Le Nom ne dois pas étre null")
+     * @ORM\Column(name="name", type="string", length=255, nullable=false)
      */
     protected $name;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="string", length=255)
+     * @ORM\Column(name="description", type="text", length=255, nullable=true)
      */
     protected $description;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="image", type="string", length=255)
+     * @ORM\Column(name="image", type="string", length=255, nullable=true)
      */
     protected $image;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="quantity", type="integer")
+     * @ORM\Column(name="quantity", type="integer", nullable=true)
      */
     protected $quantity;
 
     /**
+     * @var integer
+     *
+     * @ORM\Column(name="price", type="integer", nullable=true)
+     */
+    protected $price;
+
+    /**
      * @var \DateTime
      *
-     * @ORM\Column(name="createdAt", type="datetime")
+     * @ORM\Column(name="createdAt", type="datetime", nullable=false)
      */
     protected $createdAt;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="updatedAt", type="datetime")
+     * @ORM\Column(name="updatedAt", type="datetime", nullable=true)
      */
     protected $updatedAt;
 
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="price", type="integer")
-     */
-    protected $price;
+    public function __construct()
+    {
+        if($this->createdAt === null)
+        {
+            $this->createdAt = new \DateTime();
+        }
+        else
+        {
+            $this->updatedAt = new \DateTime();
+        }
 
+    }
 
     /**
      * Get id
@@ -174,6 +188,29 @@ class Product
     }
 
     /**
+     * Set price
+     *
+     * @param integer $price
+     * @return Product
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+
+        return $this;
+    }
+
+    /**
+     * Get price
+     *
+     * @return integer
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
      * Set createdAt
      *
      * @param \DateTime $createdAt
@@ -217,28 +254,5 @@ class Product
     public function getUpdatedAt()
     {
         return $this->updatedAt;
-    }
-
-    /**
-     * Set price
-     *
-     * @param integer $price
-     * @return Product
-     */
-    public function setPrice($price)
-    {
-        $this->price = $price;
-
-        return $this;
-    }
-
-    /**
-     * Get price
-     *
-     * @return integer
-     */
-    public function getPrice()
-    {
-        return $this->price;
     }
 }

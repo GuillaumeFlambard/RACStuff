@@ -1,12 +1,13 @@
-<a href={{ path("rac_development_product_create") }}>Créer</a>
+<a href={{ path('rac_development_product_create') }}>{{ 'rac_develoment.general.add'|trans() }}</a>
 <table>
     <tr>
-        <td>Nom</td>
-        <td>Description</td>
-        <td>Image</td>
-        <td>Quantitée</td>
-        <td>Prix</td>
-        <td>Date de création</td>
+        <td>{{ 'rac_develoment.product.field.name'|trans() }}</td>
+        <td>{{ 'rac_develoment.product.field.description'|trans() }}</td>
+        <td>{{ 'rac_develoment.product.field.image'|trans() }}</td>
+        <td>{{ 'rac_develoment.product.field.quantity'|trans() }}</td>
+        <td>{{ 'rac_develoment.product.field.price'|trans() }}</td>
+        <td>{{ 'rac_develoment.general.created_at'|trans() }}</td>
+        <td>{{ 'rac_develoment.general.action'|trans() }}</td>
     </tr>
 {% for entity in entities %}
     <tr>
@@ -16,6 +17,16 @@
         <td>{{ entity.quantity }}</td>
         <td>{{ entity.price }}&nbsp;€</td>
         <td>{{ entity.createdAt.date }}</td>
+        <td>
+            <a class='delete' href={{ path('rac_development_product_delete', {'id' : entity.id}) }}>{{ 'rac_develoment.general.delete'|trans() }}</a>
+            <a href={{ path('rac_development_product_edit', {'id' : entity.id}) }}>{{ 'rac_develoment.general.edit'|trans() }}</a>
+        </td>
     </tr>
 {% endfor %}
 </table>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script language="javascript" type="text/javascript">
+    $( '.delete' ).click(function() {
+        alert( "{{ 'rac_develoment.general.delete_comfirmation'|trans() }}" );
+    });
+</script>

@@ -13,13 +13,26 @@ class ProductType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name', 'text')
-            ->add('description', 'text')
-            ->add('image', 'text')
-            ->add('quantity', 'integer')
-            ->add('createdAt', 'datetime')
-            ->add('updatedAt', 'datetime')
-            ->add('price', 'integer')
+            ->add('name', 'text', array(
+                "label"     => "rac_develoment.product.field.name",
+                "required"   => true
+            ))
+            ->add('description', 'textarea', array(
+                "label"     => "rac_develoment.product.field.description",
+                "required"   => true
+            ))
+            ->add('image', 'text', array(
+                "label"     => "rac_develoment.product.field.image",
+                "required"   => true
+            ))
+            ->add('quantity', 'integer', array(
+                "label"     => "rac_develoment.product.field.quantity",
+                "required"   => true
+            ))
+            ->add('price', 'integer', array(
+                "label"     => "rac_develoment.product.field.price",
+                "required"   => true
+            ))
         ;
     }
 

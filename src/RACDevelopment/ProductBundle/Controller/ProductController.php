@@ -32,4 +32,40 @@
             $data["route"] = "rac_development_product_create";
             return $this->render('RACDevelopmentProductBundle:Product:create.html.twig', $data);
         }
+
+        public function editAction($id)
+        {
+            $em = $this->getDoctrine()->getManager();
+            $query = $em->getRepository('RACDevelopmentProductBundle:Product')->find($id);
+            if($query)
+            {
+                $request = $this->get("request");
+                $form = $this->createForm("racdevelopment_productbundle_producttype", $query);
+                $form->bind($request);
+                if ($form->isValid())
+                {
+                    $em = $this->getDoctrine()->getManager();
+                    $em->persist($query);
+                    $em->flush();
+                    return $this->redirect($this->generateUrl('rac_development_product_index'));
+                }
+                $data["id"] = $id;
+                $data["form"] = $form->createView();
+                $data["route"] = "rac_development_product_edit";
+            }
+            return $this->render('RACDevelopmentProductBundle:Product:edit.html.twig', $data);
+        }
+
+        public function deleteAction($id)
+        {
+            $em = $this->getDoctrine()->getManager();
+            $query = $em->getRepository('RACDevelopmentProductBundle:Product')->find($id);
+
+            if ($query)
+            {
+                $em->remove($query);
+                $em->flush();
+            }
+            return $this->redirect($this->generateUrl('rac_development_product_index'));
+        }
     }

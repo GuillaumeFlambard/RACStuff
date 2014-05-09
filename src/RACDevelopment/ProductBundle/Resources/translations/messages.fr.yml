@@ -1,0 +1,17 @@
+rac_develoment:
+    general:
+        created_at: Créé à
+        updated_at: Mis a jour à
+        add: Ajouter
+        delete: Supprimer
+        edit: Editer
+        action: Actions
+        delete_comfirmation: Etes vous sur de vouloir supprimer cet élément ?
+    product:
+        title: Produit
+        field:
+            name: Nom
+            description: Description
+            image: Image
+            quantity: Quantitée
+            price: prix
