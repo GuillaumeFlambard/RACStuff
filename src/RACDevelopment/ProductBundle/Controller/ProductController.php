@@ -25,7 +25,11 @@
             if ($form->isValid())
             {
                 $em = $this->getDoctrine()->getManager();
-                
+                $this->upload($entity->getImage());
+                if($entity->getImage() !== null)
+                {
+                    $entity->setImageName($entity->getImage()->getClientOriginalName());
+                }
                 $em->persist($entity);
                 $em->flush();
                 return $this->redirect($this->generateUrl('rac_development_product_index'));
@@ -47,6 +51,11 @@
                 if ($form->isValid())
                 {
                     $em = $this->getDoctrine()->getManager();
+                    $this->upload($query->getImage());
+                    if($query->getImage() !== null)
+                    {
+                        $query->setImageName($query->getImage()->getClientOriginalName());
+                    }
                     $em->persist($query);
                     $em->flush();
                     return $this->redirect($this->generateUrl('rac_development_product_index'));
@@ -69,5 +78,36 @@
                 $em->flush();
             }
             return $this->redirect($this->generateUrl('rac_development_product_index'));
+        }
+
+        public function upload($image)
+        {
+            if (null === $image)
+            {
+                return;
+            }
+
+            $name = $image->getClientOriginalName();
+
+            $image->move($this->getUploadRootDir(), $name);
+
+            $this->url = $name;
+
+            $this->alt = $name;
+        }
+
+        public function getUploadDir()
+        {
+            return 'rac/img_product';
+        }
+
+        protected function getUploadRootDir()
+        {
+            return __DIR__.'/../../../../web/'.$this->getUploadDir();
+        }
+
+        public function getWebPath()
+        {
+            return $this->getUploadDir().'/'.$this->getId().'.'.$this->getUrl();
         }
     }

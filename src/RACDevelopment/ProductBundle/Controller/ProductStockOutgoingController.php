@@ -25,6 +25,7 @@ class ProductStockOutgoingController extends Controller
         {
             $em = $this->getDoctrine()->getManager();
             $product = $em->getRepository('RACDevelopmentProductBundle:Product')->find($productId);
+            $entity->setProduct($product->getId());
             $product->setQuantity($product->getQuantity()-$entity->getQuantity());
             $product->setPrice($product->getPrice()+$entity->getPrice()+$entity->getShippingClient()-$entity->getShippingRAC());
             $em->persist($entity);

@@ -1,10 +1,10 @@
 <a href={{ path('rac_development_product_create') }}>{{ 'rac_develoment.general.add'|trans() }}</a>
 <table>
     <tr>
+        <td>{{ 'rac_develoment.product.field.image'|trans() }}</td>
         <td>{{ 'rac_develoment.product.field.name'|trans() }}</td>
         <td>{{ 'rac_develoment.product.field.feature'|trans() }}</td>
         <td>{{ 'rac_develoment.product.field.description'|trans() }}</td>
-        <td>{{ 'rac_develoment.product.field.image'|trans() }}</td>
         <td>{{ 'rac_develoment.product.field.quantity'|trans() }}</td>
         <td>{{ 'rac_develoment.product.field.price'|trans() }}</td>
         <td>{{ 'rac_develoment.general.created_at'|trans() }}</td>
@@ -12,10 +12,10 @@
     </tr>
 {% for entity in entities %}
     <tr>
+        <td><img style="width: 30%; height: 25%;" src="{{ asset("rac/img_product/" ~ entity.imageName) }}" alt="{{ entity.imageName }}"></td>
         <td>{{ entity.name }}</td>
         <td>{{ entity.feature }}</td>
         <td>{{ entity.description }}</td>
-        <td>{{ entity.image }}</td>
         <td>{{ entity.quantity }}</td>
         <td>{{ entity.price }}&nbsp;€</td>
         <td>{{ entity.createdAt.date }}</td>

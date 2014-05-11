@@ -38,11 +38,12 @@ class Product
     protected $description;
 
     /**
-     * @var
+     * @var string
      *
-     * @Assert\File(maxSize="6000000")
-     * @ORM\Column(name="image", nullable=true)
+     * @ORM\Column(name="image_name", type="text", length=255, nullable=true)
      */
+    protected $imageName;
+
     protected $image;
 
     /**
@@ -124,6 +125,29 @@ class Product
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * Set imageName
+     *
+     * @param string $imageName
+     * @return Product
+     */
+    public function setImageName($imageName)
+    {
+        $this->imageName = $imageName;
+
+        return $this;
+    }
+
+    /**
+     * Get imageName
+     *
+     * @return string
+     */
+    public function getImageName()
+    {
+        return $this->imageName;
     }
 
     /**

@@ -25,6 +25,7 @@ class ProductStockIncomingController extends Controller
         {
             $em = $this->getDoctrine()->getManager();
             $product = $em->getRepository('RACDevelopmentProductBundle:Product')->find($productId);
+            $entity->setProduct($product->getId());
             $product->setQuantity($product->getQuantity()+$entity->getQuantity());
             $product->setPrice($product->getPrice()-$entity->getPrice()-$entity->getShipping());
             $em->persist($entity);
@@ -48,8 +49,6 @@ class ProductStockIncomingController extends Controller
             $form->bind($request);
             if ($form->isValid())
             {
-                var_dump("test");
-                exit();
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($query);
                 $em->flush();
