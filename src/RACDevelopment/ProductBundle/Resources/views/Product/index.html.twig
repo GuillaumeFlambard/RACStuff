@@ -12,7 +12,7 @@
     </tr>
 {% for entity in entities %}
     <tr>
-        <td><img style="width: 30%; height: 25%;" src="{{ asset("rac/img_product/" ~ entity.imageName) }}" alt="{{ entity.imageName }}"></td>
+        <td style="width: 15%; height: 10%;"><img style="width: 100%; height: 100%;" src="{{ asset("rac/img_product/" ~ entity.imageName) }}" alt="{{ entity.imageName }}"></td>
         <td>{{ entity.name }}</td>
         <td>{{ entity.feature }}</td>
         <td>{{ entity.description }}</td>
