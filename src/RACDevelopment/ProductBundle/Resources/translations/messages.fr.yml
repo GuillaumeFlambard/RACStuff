@@ -9,9 +9,25 @@ rac_develoment:
         delete_comfirmation: Etes vous sur de vouloir supprimer cet élément ?
     product:
         title: Produit
+        action:
+            incoming: Entrée
+            outgoing: Sortie
         field:
             name: Nom
             description: Description
             image: Image
             quantity: Quantitée
             price: prix
+            feature: Particularité
+    product_stock_incoming:
+        field:
+            quantity: Quantitée
+            price: Prix
+            shipping: Frais de livraison
+    product_stock_outgoing:
+        field:
+            quantity: Quantitée
+            price: Prix
+            shipping_client: Frais de livraison client
+            shipping_rac: Frais de livraison RAC
+            origin: Origine de la vente

@@ -5,12 +5,12 @@ namespace RACDevelopment\ProductBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * ProductStockHistory
+ * ProductStockOutgoing
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="RACDevelopment\ProductBundle\Entity\ProductStockHistoryRepository")
+ * @ORM\Entity(repositoryClass="RACDevelopment\ProductBundle\Repository\ProductStockOutgoingRepository")
  */
-class ProductStockHistory
+class ProductStockOutgoing
 {
     /**
      * @var integer
@@ -22,9 +22,10 @@ class ProductStockHistory
     private $id;
 
     /**
-     * @var mixed
+     * @var \RACDevelopment\ProductBundle\Entity\Product
      *
-     * @ORM\ManyToOne(targetEntity="RACDevelopment\ProductBundle\Entity\Product", cascade={"persist", "remove"})
+     * @ORM\ManyToOne(targetEntity="RACDevelopment\ProductBundle\Entity\Product")
+     * @ORM\Column(name="product", type="object", nullable=true)
      */
     private $product;
 
@@ -36,25 +37,25 @@ class ProductStockHistory
     private $quantity;
 
     /**
-     * @var integer
+     * @var float
      *
-     * @ORM\Column(name="quantityAdd", type="integer")
+     * @ORM\Column(name="price", type="float")
      */
-    private $quantityAdd;
+    private $price;
 
     /**
-     * @var integer
+     * @var float
      *
-     * @ORM\Column(name="quantityRemove", type="integer")
+     * @ORM\Column(name="shippingClient", type="float")
      */
-    private $quantityRemove;
+    private $shippingClient;
 
     /**
-     * @var string
+     * @var float
      *
-     * @ORM\Column(name="comment", type="text")
+     * @ORM\Column(name="shippingRAC", type="float")
      */
-    private $comment;
+    private $shippingRAC;
 
     /**
      * @var string
@@ -77,8 +78,8 @@ class ProductStockHistory
     /**
      * Set product
      *
-     * @param string $product
-     * @return RACDevelopment\ProductBundle\Entity\Product
+     * @param \RACDevelopment\ProductBundle\Entity\Product $product
+     * @return ProductStockOutgoing
      */
     public function setProduct($product)
     {
@@ -88,9 +89,9 @@ class ProductStockHistory
     }
 
     /**
-     * Get RACDevelopment\ProductBundle\Entity\Product
+     * Get product
      *
-     * @return string 
+     * @return \RACDevelopment\ProductBundle\Entity\Product
      */
     public function getProduct()
     {
@@ -101,7 +102,7 @@ class ProductStockHistory
      * Set quantity
      *
      * @param integer $quantity
-     * @return ProductStockHistory
+     * @return ProductStockOutgoing
      */
     public function setQuantity($quantity)
     {
@@ -121,79 +122,79 @@ class ProductStockHistory
     }
 
     /**
-     * Set quantityAdd
+     * Set price
      *
-     * @param integer $quantityAdd
-     * @return ProductStockHistory
+     * @param float $price
+     * @return ProductStockOutgoing
      */
-    public function setQuantityAdd($quantityAdd)
+    public function setPrice($price)
     {
-        $this->quantityAdd = $quantityAdd;
+        $this->price = $price;
 
         return $this;
     }
 
     /**
-     * Get quantityAdd
+     * Get price
      *
-     * @return integer 
+     * @return float
      */
-    public function getQuantityAdd()
+    public function getPrice()
     {
-        return $this->quantityAdd;
+        return $this->price;
     }
 
     /**
-     * Set quantityRemove
+     * Set shippingClient
      *
-     * @param integer $quantityRemove
-     * @return ProductStockHistory
+     * @param float $shippingClient
+     * @return ProductStockOutgoing
      */
-    public function setQuantityRemove($quantityRemove)
+    public function setShippingClient($shippingClient)
     {
-        $this->quantityRemove = $quantityRemove;
+        $this->shippingClient = $shippingClient;
 
         return $this;
     }
 
     /**
-     * Get quantityRemove
+     * Get shippingClient
      *
-     * @return integer 
+     * @return float 
      */
-    public function getQuantityRemove()
+    public function getShippingClient()
     {
-        return $this->quantityRemove;
+        return $this->shippingClient;
     }
 
     /**
-     * Set comment
+     * Set shippingRAC
      *
-     * @param string $comment
-     * @return ProductStockHistory
+     * @param float $shippingRAC
+     * @return ProductStockOutgoing
      */
-    public function setComment($comment)
+    public function setShippingRAC($shippingRAC)
     {
-        $this->comment = $comment;
+        $this->shippingRAC = $shippingRAC;
 
         return $this;
     }
 
     /**
-     * Get comment
+     * Get shippingRAC
      *
-     * @return string 
+     * @return float 
      */
-    public function getComment()
+    public function getShippingRAC()
     {
-        return $this->comment;
+        return $this->shippingRAC;
     }
 
     /**
      * Set origin
      *
      * @param string $origin
-     * @return ProductStockHistory
+     * @return ProductStockOutgoing
      */
     public function setOrigin($origin)
     {

@@ -8,25 +8,21 @@ use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 use Doctrine\ORM\EntityRepository;
 
 
-class ProductType extends AbstractType
+class ProductStockIncomingType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name', 'text', array(
-                "label"     => "rac_develoment.product.field.name",
+            ->add('quantity', 'integer', array(
+                "label"     => "rac_develoment.product_stock_incoming.field.quantity",
                 "required"   => true
             ))
-            ->add('feature', 'text', array(
-                "label"     => "rac_develoment.product.field.feature",
+            ->add('price', 'integer', array(
+                "label"     => "rac_develoment.product_stock_incoming.field.price",
                 "required"   => true
             ))
-            ->add('description', 'textarea', array(
-                "label"     => "rac_develoment.product.field.description",
-                "required"   => true
-            ))
-            ->add('image', 'file', array(
-                "label"     => "rac_develoment.product.field.image",
+            ->add('shipping', 'integer', array(
+                "label"     => "rac_develoment.product_stock_incoming.field.shipping",
                 "required"   => true
             ))
         ;
@@ -35,13 +31,13 @@ class ProductType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'RACDevelopment\ProductBundle\Entity\Product'
+            'data_class' => 'RACDevelopment\ProductBundle\Entity\ProductStockIncoming'
         ));
     }
 
     public function getName()
     {
-        return 'racdevelopment_productbundle_producttype';
+        return 'racdevelopment_productbundle_productstockincomingtype';
     }
 }
 

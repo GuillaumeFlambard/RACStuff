@@ -5,6 +5,7 @@
     use Symfony\Bundle\FrameworkBundle\Controller\Controller;
     use Symfony\Component\HttpFoundation\Response;
     use RACDevelopment\ProductBundle\Entity\Product;
+    use Symfony\Component\HttpFoundation\File\UploadedFile;
 
     class ProductController extends Controller
     {
@@ -24,6 +25,7 @@
             if ($form->isValid())
             {
                 $em = $this->getDoctrine()->getManager();
+                
                 $em->persist($entity);
                 $em->flush();
                 return $this->redirect($this->generateUrl('rac_development_product_index'));

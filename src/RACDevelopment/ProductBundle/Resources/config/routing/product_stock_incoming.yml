@@ -1,0 +1,15 @@
+rac_development_product_stock_incoming_index:
+    pattern:  /
+    defaults: { _controller: RACDevelopmentProductBundle:ProductStockIncoming:index }
+
+rac_development_product_stock_incoming_create:
+    pattern:  /create/{productId}
+    defaults: { _controller: RACDevelopmentProductBundle:ProductStockIncoming:create }
+
+rac_development_product_stock_incoming_edit:
+    pattern:  /edit/{id}
+    defaults: { _controller: RACDevelopmentProductBundle:ProductStockIncoming:edit }
+
+rac_development_product_stock_incoming_delete:
+    pattern:  /delete/{id}
+    defaults: { _controller: RACDevelopmentProductBundle:ProductStockIncoming:delete }

@@ -1,3 +1,11 @@
+rac_development_product_stock_outgoing:
+    resource: "@RACDevelopmentProductBundle/Resources/config/routing/product_stock_outgoing.yml"
+    prefix: /outgoing
+
+rac_development_product_stock_incoming:
+    resource: "@RACDevelopmentProductBundle/Resources/config/routing/product_stock_incoming.yml"
+    prefix: /incoming
+
 rac_development_product:
     resource: "@RACDevelopmentProductBundle/Resources/config/routing/product.yml"
     prefix: /

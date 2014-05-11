@@ -2,14 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aeecc073-5a63-43ae-be6a-789232558e72" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/Product/edit.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/translations/messages.fr.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Controller/ProductStockIncomingController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Form/ProductStockIncomingType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Controller/ProductStockOutgoingController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Form/ProductStockOutgoingType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/ProductStockIncoming/create.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/ProductStockOutgoing/create.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/ProductStockIncoming/edit.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/ProductStockOutgoing/edit.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/ProductStockIncoming/index.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/ProductStockOutgoing/index.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/config/routing/product_stock_incoming.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/config/routing/product_stock_outgoing.yml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Entity/ProductStockHistory.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Repository/ProductStockHistoryRepository.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Entity/Product.php" afterPath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Entity/Product.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Controller/ProductController.php" afterPath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Controller/ProductController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Form/ProductType.php" afterPath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Form/ProductType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/Product/create.html.twig" afterPath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/Product/create.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/config/form.yml" afterPath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/config/form.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/Product/index.html.twig" afterPath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/Product/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/config/routing/product.yml" afterPath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/config/routing/product.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/translations/messages.fr.yml" afterPath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/translations/messages.fr.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/config/routing.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RACStuff.iws" />
@@ -33,19 +46,93 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ProductStockHistoryRepository.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Repository/ProductStockHistoryRepository.php">
+      <file leaf-file-name="index.html.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/Product/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="61" selection-start="196" selection-end="196" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="378">
+            <state line="25" column="87" selection-start="1538" selection-end="1538" vertical-scroll-proportion="-16.666666" vertical-offset="0" max-vertical-offset="756">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductStockHistory.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Entity/ProductStockHistory.php">
+      <file leaf-file-name="ProductController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Controller/ProductController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="19" selection-start="294" selection-end="294" vertical-scroll-proportion="0.29157668" vertical-offset="0" max-vertical-offset="3960">
+            <state line="27" column="16" selection-start="1033" selection-end="1033" vertical-scroll-proportion="0.35516092" vertical-offset="166" max-vertical-offset="1422">
+              <folding>
+                <element signature="e#67#124#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductStockIncomingController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Controller/ProductStockIncomingController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="88" selection-start="1390" selection-end="1390" vertical-scroll-proportion="-14.0" vertical-offset="144" max-vertical-offset="1458">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Product.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Entity/Product.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="6" selection-start="837" selection-end="837" vertical-scroll-proportion="-10.111111" vertical-offset="447" max-vertical-offset="5292">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductStockOutgoingController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Controller/ProductStockOutgoingController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="9" selection-start="906" selection-end="906" vertical-scroll-proportion="-9.703704" vertical-offset="134" max-vertical-offset="1458">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductType.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Form/ProductType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="32" selection-start="924" selection-end="924" vertical-scroll-proportion="-15.444445" vertical-offset="15" max-vertical-offset="918">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create.html.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/ProductStockIncoming/create.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="53" selection-start="53" selection-end="53" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="180">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create.html.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/ProductStockOutgoing/create.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="7" selection-start="241" selection-end="241" vertical-scroll-proportion="-2.6666667" vertical-offset="0" max-vertical-offset="180">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductStockIncomingType.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Form/ProductStockIncomingType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="14" selection-start="952" selection-end="952" vertical-scroll-proportion="-15.333333" vertical-offset="0" max-vertical-offset="846">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductStockOutgoingType.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Form/ProductStockOutgoingType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="36" selection-start="950" selection-end="950" vertical-scroll-proportion="-11.444445" vertical-offset="87" max-vertical-offset="990">
               <folding />
             </state>
           </provider>
@@ -83,22 +170,40 @@
         <option value="$PROJECT_DIR$/src/RACDevelopment/UserBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/app/cache/dev/classes.php" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
-        <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/RACDevelopment/UserBundle/Resources/views/Product/index.html.twig" />
         <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Repository/ProductRepository.php" />
         <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/DependencyInjection/RACDevelopmentProductExtension.php" />
-        <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/config/form.yml" />
-        <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Form/ProductType.php" />
         <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/Product/create.html.twig" />
-        <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Entity/Product.php" />
-        <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/translations/messages.fr.yml" />
-        <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/Product/index.html.twig" />
         <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/config/routing/product.yml" />
         <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/Product/edit.html.twig" />
-        <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Controller/ProductController.php" />
         <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Repository/ProductStockHistoryRepository.php" />
         <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Entity/ProductStockHistory.php" />
+        <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Repository/ProductStockIncomingRepository.php" />
+        <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Repository/ProductStockOutgoingRepository.php" />
+        <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Controller/ProductStockIncoming.php" />
+        <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Controller/ProductStockOutgoing.php" />
+        <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Entity/ProductStockIncoming.php" />
+        <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Entity/ProductStockOutgoing.php" />
+        <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Form/ProductStockIncoming.php" />
+        <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Form/ProductStockOutgoing.php" />
+        <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/config/form.yml" />
+        <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/ProductStockIncoming/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/ProductStockOutgoing/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/translations/messages.fr.yml" />
+        <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/config/routing/product_stock_incoming.yml" />
+        <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/Product/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/config/routing/product_stock_outgoing.yml" />
+        <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/ProductStockIncoming/create.html.twig" />
+        <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/ProductStockOutgoing/create.html.twig" />
+        <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Form/ProductStockIncomingType.php" />
+        <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Form/ProductStockOutgoingType.php" />
+        <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Controller/ProductStockIncomingController.php" />
+        <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Controller/ProductStockOutgoingController.php" />
+        <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Entity/Product.php" />
+        <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Form/ProductType.php" />
+        <option value="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Controller/ProductController.php" />
       </list>
     </option>
   </component>
@@ -229,114 +334,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RACStuff" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RACStuff" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RACDevelopment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProductBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RACStuff" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RACStuff" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RACDevelopment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProductBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Repository" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RACStuff" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RACStuff" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RACDevelopment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProductBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RACStuff" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RACStuff" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RACDevelopment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProductBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -361,6 +358,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/ProductStockOutgoing" />
+      <recent name="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/ProductStockIncoming" />
       <recent name="$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -418,20 +417,20 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32756868" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21239892" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25429362" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33926702" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21239892" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20592992" sideWeight="0.67129135" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25429362" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959569" sideWeight="0.67129135" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33926702" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32756868" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -456,93 +455,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="121" selection-end="121" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="162">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Entity/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="13" selection-start="888" selection-end="888" vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="4500">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Repository/ProductRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="49" selection-start="56" selection-end="56" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="378">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Form/ProductType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="29" selection-start="404" selection-end="414" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="702">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Entity/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="6" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="4500">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Repository/ProductRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="49" selection-start="56" selection-end="56" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="378">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="24" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1422" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="486" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/UserBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="27" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="540" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="26" selection-start="767" selection-end="767" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1026" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="1" selection-start="1465" selection-end="1465" vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="774" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app_dev.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="1144" selection-end="1144" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="630" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="49" selection-start="792" selection-end="792" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1062" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="49" selection-start="792" selection-end="792" vertical-scroll-proportion="0.2613391" vertical-offset="136" max-vertical-offset="1062" />
@@ -625,9 +537,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/RACDevelopmentProductBundle.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="150" selection-end="150" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="270">
-          <folding />
-        </state>
+        <state line="9" column="0" selection-start="150" selection-end="150" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="270" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RACDevelopment/UserBundle/Resources/config/services.yml">
@@ -642,7 +552,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Repository/ProductRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="49" selection-start="56" selection-end="56" vertical-scroll-proportion="0.03887689" vertical-offset="0" max-vertical-offset="926">
+        <state line="2" column="49" selection-start="56" selection-end="56" vertical-scroll-proportion="0.03887689" vertical-offset="0" max-vertical-offset="926" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="45" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1422" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/UserBundle/Resources/translations/messages.fr.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/Product/create.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="7" selection-start="214" selection-end="214" vertical-scroll-proportion="0.07775378" vertical-offset="0" max-vertical-offset="926" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Repository/ProductStockIncomingRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="304" selection-end="304" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="378">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Repository/ProductStockOutgoingRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="49" selection-start="56" selection-end="56" vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="378">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/DependencyInjection/Configuration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="928">
           <folding />
         </state>
       </provider>
@@ -654,114 +603,173 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/config/routing.yml">
+    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/Product/edit.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="121" selection-end="121" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="162">
+        <state line="3" column="56" selection-start="219" selection-end="219" vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="198">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Entity/ProductStockIncoming.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="45" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1422">
+        <state line="27" column="63" selection-start="657" selection-end="657" vertical-scroll-proportion="-16.0" vertical-offset="54" max-vertical-offset="2898">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Entity/ProductStockOutgoing.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+        <state line="27" column="64" selection-start="658" selection-end="658" vertical-scroll-proportion="-18.0" vertical-offset="0" max-vertical-offset="3978">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/UserBundle/Resources/translations/messages.fr.yml">
+    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/config/routing/product.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Form/ProductType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="51" selection-start="597" selection-end="597" vertical-scroll-proportion="-10.666667" vertical-offset="0" max-vertical-offset="990">
+        <state line="15" column="0" selection-start="511" selection-end="511" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/config/form.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="60" selection-start="229" selection-end="229" vertical-scroll-proportion="0.09443861" vertical-offset="0" max-vertical-offset="953">
+        <state line="23" column="0" selection-start="1207" selection-end="1207" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522">
+          <folding>
+            <marker date="1399794533368" expanded="true" signature="-1:-1" placeholder="parameters:" />
+            <marker date="1399794533368" expanded="true" signature="-1:-1" placeholder="services:" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+          <folding>
+            <marker date="1399794564984" expanded="true" signature="-1:-1" placeholder="rac_development_product_stock_outgoing:" />
+            <marker date="1399794564984" expanded="true" signature="-1:-1" placeholder="rac_development_product_stock_incoming:" />
+            <marker date="1399794564984" expanded="true" signature="-1:-1" placeholder="rac_development_product:" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/ProductStockIncoming/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="903">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Entity/Product.php">
+    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/ProductStockIncoming/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="37" selection-start="1577" selection-end="1577" vertical-scroll-proportion="0.4276458" vertical-offset="972" max-vertical-offset="4752">
-          <folding>
-            <element signature="e#55#87#0" expanded="true" />
-          </folding>
+        <state line="24" column="78" selection-start="1254" selection-end="1254" vertical-scroll-proportion="-16.0" vertical-offset="0" max-vertical-offset="594">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/ProductStockOutgoing/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="903">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/ProductStockOutgoing/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="36" selection-start="944" selection-end="944" vertical-scroll-proportion="-11.333333" vertical-offset="0" max-vertical-offset="684">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/translations/messages.fr.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="77" selection-start="258" selection-end="258" vertical-scroll-proportion="0.15110178" vertical-offset="0" max-vertical-offset="953">
-          <folding>
-            <marker date="1399635682834" expanded="true" signature="-1:-1" placeholder="general:" />
-          </folding>
+        <state line="20" column="34" selection-start="558" selection-end="558" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/Product/create.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/config/routing/product_stock_incoming.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="7" selection-start="214" selection-end="214" vertical-scroll-proportion="0.07775378" vertical-offset="0" max-vertical-offset="926">
-          <folding>
-            <marker date="1399631771706" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
+        <state line="7" column="0" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/config/routing/product.yml">
+    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/config/routing/product_stock_outgoing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="31" selection-start="409" selection-end="409" vertical-scroll-proportion="0.22665268" vertical-offset="0" max-vertical-offset="953">
+        <state line="15" column="0" selection-start="635" selection-end="635" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/Product/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="13" selection-start="1190" selection-end="1190" vertical-scroll-proportion="-14.666667" vertical-offset="0" max-vertical-offset="684">
+        <state line="25" column="87" selection-start="1538" selection-end="1538" vertical-scroll-proportion="-16.666666" vertical-offset="0" max-vertical-offset="756">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/Product/edit.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/ProductStockIncoming/create.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="56" selection-start="219" selection-end="219" vertical-scroll-proportion="0.058315333" vertical-offset="0" max-vertical-offset="926">
+        <state line="0" column="53" selection-start="53" selection-end="53" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="876">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Resources/views/ProductStockOutgoing/create.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="7" selection-start="241" selection-end="241" vertical-scroll-proportion="-2.6666667" vertical-offset="0" max-vertical-offset="180">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Form/ProductStockOutgoingType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="36" selection-start="950" selection-end="950" vertical-scroll-proportion="-11.444445" vertical-offset="87" max-vertical-offset="990">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Form/ProductStockIncomingType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="14" selection-start="952" selection-end="952" vertical-scroll-proportion="-15.333333" vertical-offset="0" max-vertical-offset="846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Controller/ProductStockIncomingController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="88" selection-start="1390" selection-end="1390" vertical-scroll-proportion="-14.0" vertical-offset="144" max-vertical-offset="1458">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Controller/ProductStockOutgoingController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="9" selection-start="906" selection-end="906" vertical-scroll-proportion="-9.703704" vertical-offset="134" max-vertical-offset="1458">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Entity/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="6" selection-start="837" selection-end="837" vertical-scroll-proportion="-10.111111" vertical-offset="447" max-vertical-offset="5292">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Form/ProductType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="32" selection-start="924" selection-end="924" vertical-scroll-proportion="-15.444445" vertical-offset="15" max-vertical-offset="918">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Controller/ProductController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="90" selection-start="1547" selection-end="1547" vertical-scroll-proportion="0.39740822" vertical-offset="280" max-vertical-offset="1350">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Repository/ProductStockHistoryRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="61" selection-start="196" selection-end="196" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="378">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RACDevelopment/ProductBundle/Entity/ProductStockHistory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="19" selection-start="294" selection-end="294" vertical-scroll-proportion="0.29157668" vertical-offset="0" max-vertical-offset="3960">
-          <folding />
+        <state line="27" column="16" selection-start="1033" selection-end="1033" vertical-scroll-proportion="0.35516092" vertical-offset="166" max-vertical-offset="1422">
+          <folding>
+            <element signature="e#67#124#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

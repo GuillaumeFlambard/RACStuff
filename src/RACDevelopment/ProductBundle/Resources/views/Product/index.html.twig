@@ -2,6 +2,7 @@
 <table>
     <tr>
         <td>{{ 'rac_develoment.product.field.name'|trans() }}</td>
+        <td>{{ 'rac_develoment.product.field.feature'|trans() }}</td>
         <td>{{ 'rac_develoment.product.field.description'|trans() }}</td>
         <td>{{ 'rac_develoment.product.field.image'|trans() }}</td>
         <td>{{ 'rac_develoment.product.field.quantity'|trans() }}</td>
@@ -12,6 +13,7 @@
 {% for entity in entities %}
     <tr>
         <td>{{ entity.name }}</td>
+        <td>{{ entity.feature }}</td>
         <td>{{ entity.description }}</td>
         <td>{{ entity.image }}</td>
         <td>{{ entity.quantity }}</td>
@@ -20,6 +22,8 @@
         <td>
             <a class='delete' href={{ path('rac_development_product_delete', {'id' : entity.id}) }}>{{ 'rac_develoment.general.delete'|trans() }}</a>
             <a href={{ path('rac_development_product_edit', {'id' : entity.id}) }}>{{ 'rac_develoment.general.edit'|trans() }}</a>
+            <a href={{ path('rac_development_product_stock_incoming_create', {'productId' : entity.id}) }}>{{ 'rac_develoment.product.action.incoming'|trans() }}</a>
+            <a href={{ path('rac_development_product_stock_outgoing_create', {'productId' : entity.id}) }}>{{ 'rac_develoment.product.action.outgoing'|trans() }}</a>
         </td>
     </tr>
 {% endfor %}

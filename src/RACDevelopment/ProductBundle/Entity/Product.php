@@ -38,9 +38,10 @@ class Product
     protected $description;
 
     /**
-     * @var string
+     * @var
      *
-     * @ORM\Column(name="image", type="string", length=255, nullable=true)
+     * @Assert\File(maxSize="6000000")
+     * @ORM\Column(name="image", nullable=true)
      */
     protected $image;
 
@@ -57,6 +58,13 @@ class Product
      * @ORM\Column(name="price", type="integer", nullable=true)
      */
     protected $price;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="feature", type="string", nullable=true)
+     */
+    protected $feature;
 
     /**
      * @var \DateTime
@@ -208,6 +216,29 @@ class Product
     public function getPrice()
     {
         return $this->price;
+    }
+
+    /**
+     * Set feature
+     *
+     * @param integer $feature
+     * @return Product
+     */
+    public function setFeature($feature)
+    {
+        $this->feature = $feature;
+
+        return $this;
+    }
+
+    /**
+     * Get feature
+     *
+     * @return integer
+     */
+    public function getFeature()
+    {
+        return $this->feature;
     }
 
     /**
