@@ -1,0 +1,29 @@
+{% extends 'RACDevelopmentCommonBundle::layout.html.twig' %}
+
+{% block content %}
+<table>
+{% for entity in entities %}
+    <tr>
+        <td>
+            <table>
+                <tr>
+                    <td style="width: 15%; height: 10%;"><img style="width: 30%; height: 100%;" src="{{ asset("rac/img_product/" ~ entity.imageName) }}" alt="{{ entity.imageName }}"></td>
+                </tr>
+                <tr>
+                    <td>{{ entity.name }}</td>
+                </tr>
+                <tr>
+                    <td>{{ entity.feature }}</td>
+                </tr>
+                <tr>
+                    <td>{{ entity.description }}</td>
+                </tr>
+                <tr>
+                    <td>{{ entity.price }}&nbsp;€</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+{% endfor %}
+</table>
+{% endblock %}

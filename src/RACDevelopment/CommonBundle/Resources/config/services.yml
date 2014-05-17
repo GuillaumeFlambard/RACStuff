@@ -1,0 +1,7 @@
+parameters:
+#    rac_development_user.example.class: RACDevelopment\UserBundle\Example
+
+services:
+#    rac_development_user.example:
+#        class: %rac_development_user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

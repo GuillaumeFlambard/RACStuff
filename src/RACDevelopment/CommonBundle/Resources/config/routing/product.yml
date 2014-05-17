@@ -1,0 +1,15 @@
+rac_development_product_index:
+    pattern:  /
+    defaults: { _controller: RACDevelopmentProductBundle:Product:index }
+
+rac_development_product_create:
+    pattern:  /create
+    defaults: { _controller: RACDevelopmentProductBundle:Product:create }
+
+rac_development_product_edit:
+    pattern:  /edit/{id}
+    defaults: { _controller: RACDevelopmentProductBundle:Product:edit }
+
+rac_development_product_delete:
+    pattern:  /delete/{id}
+    defaults: { _controller: RACDevelopmentProductBundle:Product:delete }

@@ -1,0 +1,23 @@
+parameters:
+    rac_development.product.form.type.product.class: RACDevelopment\ProductBundle\Form\ProductType
+    rac_development.product.form.type.product_stock_incoming.class: RACDevelopment\ProductBundle\Form\ProductStockIncomingType
+    rac_development.product.form.type.product_stock_outgoing.class: RACDevelopment\ProductBundle\Form\ProductStockOutgoingType
+
+services:
+    rac_development.product.form.type.product:
+        class: RACDevelopment\ProductBundle\Form\ProductType
+        arguments: [ @service_container ]
+        tags:
+              - { name: form.type, alias: racdevelopment_productbundle_producttype }
+
+    rac_development.product.form.type.product_stock_incoming:
+        class: RACDevelopment\ProductBundle\Form\ProductStockIncomingType
+        arguments: [ @service_container ]
+        tags:
+              - { name: form.type, alias: racdevelopment_productbundle_productstockincomingtype }
+
+    rac_development.product.form.type.product_stock_outgoing:
+        class: RACDevelopment\ProductBundle\Form\ProductStockOutgoingType
+        arguments: [ @service_container ]
+        tags:
+              - { name: form.type, alias: racdevelopment_productbundle_productstockoutgoingtype }

@@ -1,36 +1,54 @@
-<a href={{ path('rac_development_product_create') }}>{{ 'rac_develoment.general.add'|trans() }}</a>
-<table>
-    <tr>
-        <td>{{ 'rac_develoment.product.field.image'|trans() }}</td>
-        <td>{{ 'rac_develoment.product.field.name'|trans() }}</td>
-        <td>{{ 'rac_develoment.product.field.feature'|trans() }}</td>
-        <td>{{ 'rac_develoment.product.field.description'|trans() }}</td>
-        <td>{{ 'rac_develoment.product.field.quantity'|trans() }}</td>
-        <td>{{ 'rac_develoment.product.field.price'|trans() }}</td>
-        <td>{{ 'rac_develoment.general.created_at'|trans() }}</td>
-        <td>{{ 'rac_develoment.general.action'|trans() }}</td>
-    </tr>
+{% extends 'RACDevelopmentCommonBundle::layout.html.twig' %}
+
+{% block title %}
+<h2>{{ 'rac_develoment.product.title'|trans() }}</h2>
+{% endblock %}
+{% block content %}
+<a href={{ path('rac_development_product_create') }}><button class="btn btn-success offset12" type="button">{{ 'rac_develoment.common.general.add'|trans() }}</button></a>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <td>{{ 'rac_develoment.product.field.image'|trans() }}</td>
+            <td>{{ 'rac_develoment.product.field.name'|trans() }}</td>
+            <td>{{ 'rac_develoment.product.field.feature'|trans() }}</td>
+            <td>{{ 'rac_develoment.product.field.description'|trans() }}</td>
+            <td>{{ 'rac_develoment.product.field.quantity'|trans() }}</td>
+            <td>{{ 'rac_develoment.product.field.turnover'|trans() }}</td>
+            <td>{{ 'rac_develoment.common.general.created_at'|trans() }}</td>
+            <td>{{ 'rac_develoment.common.general.action'|trans() }}</td>
+        </tr>
+    </thead>
+    <tbody>
 {% for entity in entities %}
     <tr>
-        <td style="width: 15%; height: 10%;"><img style="width: 100%; height: 100%;" src="{{ asset("rac/img_product/" ~ entity.imageName) }}" alt="{{ entity.imageName }}"></td>
+        <td style="width: 15%; height: 10%;"><img style="width: 50%; height: 50%;" src="{{ asset("rac/img_product/" ~ entity.imageName) }}" alt="{{ entity.imageName }}"></td>
         <td>{{ entity.name }}</td>
         <td>{{ entity.feature }}</td>
         <td>{{ entity.description }}</td>
         <td>{{ entity.quantity }}</td>
-        <td>{{ entity.price }}&nbsp;€</td>
+        <td>{{ entity.turnover }}&nbsp;€</td>
         <td>{{ entity.createdAt.date }}</td>
         <td>
-            <a class='delete' href={{ path('rac_development_product_delete', {'id' : entity.id}) }}>{{ 'rac_develoment.general.delete'|trans() }}</a>
-            <a href={{ path('rac_development_product_edit', {'id' : entity.id}) }}>{{ 'rac_develoment.general.edit'|trans() }}</a>
-            <a href={{ path('rac_development_product_stock_incoming_create', {'productId' : entity.id}) }}>{{ 'rac_develoment.product.action.incoming'|trans() }}</a>
-            <a href={{ path('rac_development_product_stock_outgoing_create', {'productId' : entity.id}) }}>{{ 'rac_develoment.product.action.outgoing'|trans() }}</a>
+            <div class="btn-group">
+                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                    Action
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href={{ path('rac_development_product_stock_incoming_create', {'productId' : entity.id}) }}>{{ 'rac_develoment.product.action.incoming'|trans() }}</a></li>
+                    <li><a href={{ path('rac_development_product_stock_outgoing_create', {'productId' : entity.id}) }}>{{ 'rac_develoment.product.action.outgoing'|trans() }}</a></li>
+                    <li><a class='delete' href={{ path('rac_development_product_delete', {'id' : entity.id}) }}>{{ 'rac_develoment.common.general.delete'|trans() }}</a></li>
+                    <li><a href={{ path('rac_development_product_edit', {'id' : entity.id}) }}>{{ 'rac_develoment.common.general.edit'|trans() }}</a></li>
+                </ul>
+            </div>
         </td>
     </tr>
 {% endfor %}
+    </tbody>
 </table>
-<script src="http://code.jquery.com/jquery.js"></script>
 <script language="javascript" type="text/javascript">
     $( '.delete' ).click(function() {
         alert( "{{ 'rac_develoment.general.delete_comfirmation'|trans() }}" );
     });
 </script>
+{% endblock %}

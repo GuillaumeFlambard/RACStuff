@@ -1,0 +1,3 @@
+rac_development_product_front_index:
+    pattern:  /
+    defaults: { _controller: RACDevelopmentProductBundle:ProductFront:index }

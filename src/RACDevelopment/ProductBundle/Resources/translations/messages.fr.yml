@@ -1,17 +1,9 @@
 rac_develoment:
-    general:
-        created_at: Créé à
-        updated_at: Mis a jour à
-        add: Ajouter
-        delete: Supprimer
-        edit: Editer
-        action: Actions
-        delete_comfirmation: Etes vous sur de vouloir supprimer cet élément ?
     product:
         title: Produit
         action:
-            incoming: Entrée
-            outgoing: Sortie
+            incoming: Entrée/stock
+            outgoing: Sortie/stock
         field:
             name: Nom
             description: Description
@@ -19,12 +11,15 @@ rac_develoment:
             quantity: Quantitée
             price: prix
             feature: Particularité
+            turnover: Chiffre d'affaire
     product_stock_incoming:
+        title: Entrée de produit
         field:
             quantity: Quantitée
             price: Prix
             shipping: Frais de livraison
     product_stock_outgoing:
+        title: Sortie de produit
         field:
             quantity: Quantitée
             price: Prix

@@ -17,6 +17,10 @@ class ProductType extends AbstractType
                 "label"     => "rac_develoment.product.field.name",
                 "required"   => true
             ))
+            ->add('price', 'text', array(
+                "label"     => "rac_develoment.product.field.price",
+                "required"   => true
+            ))
             ->add('feature', 'text', array(
                 "label"     => "rac_develoment.product.field.feature",
                 "required"   => true

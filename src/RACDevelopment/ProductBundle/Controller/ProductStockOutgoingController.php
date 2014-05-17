@@ -27,7 +27,7 @@ class ProductStockOutgoingController extends Controller
             $product = $em->getRepository('RACDevelopmentProductBundle:Product')->find($productId);
             $entity->setProduct($product->getId());
             $product->setQuantity($product->getQuantity()-$entity->getQuantity());
-            $product->setPrice($product->getPrice()+$entity->getPrice()+$entity->getShippingClient()-$entity->getShippingRAC());
+            $product->setTurnover($product->getTurnover()+$entity->getPrice()+$entity->getShippingClient()-$entity->getShippingRAC());
             $em->persist($entity);
             $em->flush();
             return $this->redirect($this->generateUrl('rac_development_product_index'));

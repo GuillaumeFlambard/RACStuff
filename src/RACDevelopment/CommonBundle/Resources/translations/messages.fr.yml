@@ -1,0 +1,20 @@
+rac_develoment:
+    common:
+        web_page:
+            title: caphat stuff
+        general:
+            created_at: Créé à
+            updated_at: Mis a jour à
+            add: Ajouter
+            delete: Supprimer
+            edit: Editer
+            action: Actions
+            delete_comfirmation: Etes vous sur de vouloir supprimer cet élément ?
+            admin: Administration
+            submit: Envoyer
+            create_title: Création
+            edit_title: Edition
+            nav:
+                product: Product
+                home: RAC
+                storm: Boutique

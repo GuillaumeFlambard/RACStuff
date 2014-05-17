@@ -25,7 +25,7 @@ class Product
     /**
      * @var string
      *
-     * @Assert\NotBlank(message="Le Nom ne dois pas étre null")
+     * @Assert\NotBlank()
      * @ORM\Column(name="name", type="string", length=255, nullable=false)
      */
     protected $name;
@@ -59,6 +59,13 @@ class Product
      * @ORM\Column(name="price", type="integer", nullable=true)
      */
     protected $price;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="turnover", type="integer", nullable=true)
+     */
+    protected $turnover;
 
     /**
      * @var string
@@ -240,6 +247,29 @@ class Product
     public function getPrice()
     {
         return $this->price;
+    }
+
+    /**
+     * Set turnover
+     *
+     * @param integer $turnover
+     * @return Product
+     */
+    public function setTurnover($turnover)
+    {
+        $this->turnover = $turnover;
+
+        return $this;
+    }
+
+    /**
+     * Get turnover
+     *
+     * @return integer
+     */
+    public function getTurnover()
+    {
+        return $this->turnover;
     }
 
     /**
