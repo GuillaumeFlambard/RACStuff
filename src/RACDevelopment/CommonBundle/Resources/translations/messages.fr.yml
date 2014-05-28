@@ -14,6 +14,8 @@ rac_develoment:
             submit: Envoyer
             create_title: Création
             edit_title: Edition
+            login: Connection
+            register: Inscription
             nav:
                 product: Product
                 home: RAC

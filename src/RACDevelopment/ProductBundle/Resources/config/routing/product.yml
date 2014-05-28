@@ -6,6 +6,10 @@ rac_development_product_create:
     pattern:  /create
     defaults: { _controller: RACDevelopmentProductBundle:Product:create }
 
+rac_development_product_historic:
+    pattern:  /historic/{id}
+    defaults: { _controller: RACDevelopmentProductBundle:Product:historic }
+
 rac_development_product_edit:
     pattern:  /edit/{id}
     defaults: { _controller: RACDevelopmentProductBundle:Product:edit }

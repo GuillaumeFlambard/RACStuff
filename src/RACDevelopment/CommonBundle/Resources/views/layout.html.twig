@@ -27,6 +27,18 @@
                             <li>
                                 <a href="{{ path('rac_development_product_index') }}">{{ 'rac_develoment.common.general.nav.product'|trans() }}</a>
                             </li>
+                            <li>
+                                <div class="btn-group">
+                                    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                                        Action
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href={{ path('fos_user_security_login') }}>{{ 'rac_develoment.common.general.login'|trans() }}</a></li>
+                                        <li><a href={{ path('fos_user_registration_register') }}>{{ 'rac_develoment.common.general.register'|trans() }}</a></li>
+                                    </ul>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>

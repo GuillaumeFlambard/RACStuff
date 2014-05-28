@@ -4,14 +4,23 @@ rac_develoment:
         action:
             incoming: Entrée/stock
             outgoing: Sortie/stock
+            historic: Historique
         field:
             name: Nom
             description: Description
             image: Image
             quantity: Quantitée
-            price: prix
+            price: Prix
             feature: Particularité
             turnover: Chiffre d'affaire
+            price_on_ligne: Prix en ligne
+        historic:
+            quantity: Quantitée
+            price: Prix
+            shipping: Frais de port
+            shipping_client: Frais de port client
+            shipping_rac: Frais de port RAC
+            origin: Origin
     product_stock_incoming:
         title: Entrée de produit
         field:

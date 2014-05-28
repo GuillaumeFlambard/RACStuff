@@ -16,6 +16,17 @@
             return $this->render('RACDevelopmentProductBundle:Product:index.html.twig', $data);
         }
 
+        public function historicAction($id)
+        {
+            $product = $this->getDoctrine()->getRepository('RACDevelopmentProductBundle:Product')->findOneBy(array('id' => $id));
+            $data["product"] = $product;
+            $productStockIncoming = $this->getDoctrine()->getRepository('RACDevelopmentProductBundle:ProductStockIncoming')->findBy(array('product' => $id));
+            $data["productStockIncoming"] = $productStockIncoming;
+            $productStockOutgoing = $this->getDoctrine()->getRepository('RACDevelopmentProductBundle:ProductStockOutgoing')->findBy(array('product' => $id));
+            $data["productStockOutgoing"] = $productStockOutgoing;
+            return $this->render('RACDevelopmentProductBundle:Product:historic.html.twig', $data);
+        }
+
         public function createAction()
         {
             $entity = new Product();

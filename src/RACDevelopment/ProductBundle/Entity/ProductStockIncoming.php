@@ -25,7 +25,7 @@ class ProductStockIncoming
      * @var \RACDevelopment\ProductBundle\Entity\Product
      *
      * @ORM\ManyToOne(targetEntity="RACDevelopment\ProductBundle\Entity\Product")
-     * @ORM\Column(name="product", type="object", nullable=true)
+     * @ORM\JoinColumn(referencedColumnName="id", nullable=true)
      */
     private $product;
 
@@ -50,6 +50,17 @@ class ProductStockIncoming
      */
     private $shipping;
 
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="createdAt", type="datetime", nullable=false)
+     */
+    protected $createdAt;
+
+    public function __construct()
+    {
+        $this->createdAt = new \DateTime();
+    }
 
     /**
      * Get id
@@ -151,5 +162,28 @@ class ProductStockIncoming
     public function getShipping()
     {
         return $this->shipping;
+    }
+
+    /**
+     * Set createdAt
+     *
+     * @param \DateTime $createdAt
+     * @return Product
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    /**
+     * Get createdAt
+     *
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
     }
 }

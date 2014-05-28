@@ -1,0 +1,61 @@
+{% extends 'RACDevelopmentCommonBundle::layout.html.twig' %}
+
+{% block title %}
+    <h2>{{ 'rac_develoment.product.title'|trans() }}</h2>
+{% endblock %}
+{% block content %}
+{{ product.name }}<br>
+{{ product.feature }}<br>
+{{ product.description }}<br>
+{{ product.quantity }}<br>
+{{ product.price }}&nbsp;€<br>
+{{ product.turnover }}&nbsp;€<br>
+{{ product.createdAt.date }}<br><br>
+<h4>{{ 'rac_develoment.product_stock_incoming.title'|trans() }}</h4>
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <td>{{ 'rac_develoment.product.historic.quantity'|trans() }}</td>
+        <td>{{ 'rac_develoment.product.historic.price'|trans() }}</td>
+        <td>{{ 'rac_develoment.product.historic.shipping'|trans() }}</td>
+        <td>{{ 'rac_develoment.common.general.created_at'|trans() }}</td>
+    </tr>
+    </thead>
+    <tbody>
+    {% for incoming in productStockIncoming %}
+        <tr>
+            <td>{{ incoming.quantity }}</td>
+            <td>{{ incoming.price }}</td>
+            <td>{{ incoming.shipping }}</td>
+            <td>{{ incoming.createdAt.date }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<h4>{{ 'rac_develoment.product_stock_outgoing.title'|trans() }}</h4>
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <td>{{ 'rac_develoment.product.historic.quantity'|trans() }}</td>
+        <td>{{ 'rac_develoment.product.historic.price'|trans() }}</td>
+        <td>{{ 'rac_develoment.product.historic.shipping_client'|trans() }}</td>
+        <td>{{ 'rac_develoment.product.historic.shipping_rac'|trans() }}</td>
+        <td>{{ 'rac_develoment.product.historic.origin'|trans() }}</td>
+        <td>{{ 'rac_develoment.common.general.created_at'|trans() }}</td>
+    </tr>
+    </thead>
+    <tbody>
+    {% for outgoing in productStockOutgoing %}
+        <tr>
+            <td>{{ outgoing.quantity }}</td>
+            <td>{{ outgoing.price }}</td>
+            <td>{{ outgoing.shippingClient }}</td>
+            <td>{{ outgoing.shippingRac }}</td>
+            <td>{{ outgoing.origin }}</td>
+            <td>{{ outgoing.createdAt.date }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

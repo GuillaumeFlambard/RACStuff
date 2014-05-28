@@ -14,6 +14,7 @@
             <td>{{ 'rac_develoment.product.field.description'|trans() }}</td>
             <td>{{ 'rac_develoment.product.field.quantity'|trans() }}</td>
             <td>{{ 'rac_develoment.product.field.turnover'|trans() }}</td>
+            <td>{{ 'rac_develoment.product.field.price_on_ligne'|trans() }}</td>
             <td>{{ 'rac_develoment.common.general.created_at'|trans() }}</td>
             <td>{{ 'rac_develoment.common.general.action'|trans() }}</td>
         </tr>
@@ -27,6 +28,7 @@
         <td>{{ entity.description }}</td>
         <td>{{ entity.quantity }}</td>
         <td>{{ entity.turnover }}&nbsp;€</td>
+        <td>{{ entity.price }}&nbsp;€</td>
         <td>{{ entity.createdAt.date }}</td>
         <td>
             <div class="btn-group">
@@ -37,6 +39,7 @@
                 <ul class="dropdown-menu">
                     <li><a href={{ path('rac_development_product_stock_incoming_create', {'productId' : entity.id}) }}>{{ 'rac_develoment.product.action.incoming'|trans() }}</a></li>
                     <li><a href={{ path('rac_development_product_stock_outgoing_create', {'productId' : entity.id}) }}>{{ 'rac_develoment.product.action.outgoing'|trans() }}</a></li>
+                    <li><a href={{ path('rac_development_product_historic', {'id' : entity.id}) }}>{{ 'rac_develoment.product.action.historic'|trans() }}</a></li>
                     <li><a class='delete' href={{ path('rac_development_product_delete', {'id' : entity.id}) }}>{{ 'rac_develoment.common.general.delete'|trans() }}</a></li>
                     <li><a href={{ path('rac_development_product_edit', {'id' : entity.id}) }}>{{ 'rac_develoment.common.general.edit'|trans() }}</a></li>
                 </ul>
@@ -48,7 +51,7 @@
 </table>
 <script language="javascript" type="text/javascript">
     $( '.delete' ).click(function() {
-        alert( "{{ 'rac_develoment.general.delete_comfirmation'|trans() }}" );
+        alert( "{{ 'rac_develoment.common.general.delete_comfirmation'|trans() }}" );
     });
 </script>
 {% endblock %}

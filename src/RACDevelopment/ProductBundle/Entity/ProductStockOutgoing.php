@@ -25,7 +25,7 @@ class ProductStockOutgoing
      * @var \RACDevelopment\ProductBundle\Entity\Product
      *
      * @ORM\ManyToOne(targetEntity="RACDevelopment\ProductBundle\Entity\Product")
-     * @ORM\Column(name="product", type="object", nullable=true)
+     * @ORM\JoinColumn(referencedColumnName="id", nullable=true)
      */
     private $product;
 
@@ -64,6 +64,17 @@ class ProductStockOutgoing
      */
     private $origin;
 
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="createdAt", type="datetime", nullable=false)
+     */
+    protected $createdAt;
+
+    public function __construct()
+    {
+        $this->createdAt = new \DateTime();
+    }
 
     /**
      * Get id
@@ -211,5 +222,28 @@ class ProductStockOutgoing
     public function getOrigin()
     {
         return $this->origin;
+    }
+
+    /**
+     * Set createdAt
+     *
+     * @param \DateTime $createdAt
+     * @return Product
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    /**
+     * Get createdAt
+     *
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
     }
 }
