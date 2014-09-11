@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Long polling</title>
+		<meta name="author" content="Gael Coat">
+		<meta charset="UTF-8">
+		<style type="text/css" media="screen">
+	        body{ background:#000;color:#fff;font-size:.9em; }
+	        .msg{ background:#aaa;padding:.2em; border-bottom:1px #000 solid}
+	        .old{ background-color:#246499;}
+	        .new{ background-color:#3B9957;}
+	        .error{ background-color:#992E36;}
+	    </style>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	    <script type="text/javascript" charset="utf-8">
+	        function addmsg(type, data){
+
+	        	data = JSON.parse(data);
+
+	        	var nb_messages;
+	        	nb_messages = data.msgs.length;
+
+	        	if (nb_messages > 0)
+	        	{
+	        		$("#messages").append(
+		                    "<div class='msg "+ type +"'>"+ nb_messages +" new messages</div>");
+	        	}
+	        	else
+	        	{
+	        		$("#messages").append(
+		                    "<div class='msg "+ type +"'>no new message</div>");
+	        	}
+		            
+	        }
+
+	        function waitForMsg(){
+	            /* This requests the url PFTopFrontPushURI
+	             When it complete (or errors) */
+	            $.ajax({
+	                type: "GET",
+	                url: "pusher.php?action=get_msgs",
+	                async: true, /* If set to non-async, browser shows page as loading */
+	                cache: false,
+	                timeout:30000, /* Timeout in ms */
+
+	                success: function(data){ /* called when request to PFTopFrontPushURI completes */
+	                    addmsg("new", data); /* pushes data in dom or whatever ... */
+	                    setTimeout(
+	                            waitForMsg, /* Request next message */
+	                            1000 /* ..after 1 seconds */
+	                    );
+	                },
+	                error: function(XMLHttpRequest, textStatus, errorThrown){
+	                    addmsg("error", textStatus + " (" + errorThrown + ")");
+	                    setTimeout(
+	                            waitForMsg, /* Try again after.. */
+	                            10000); /* milliseconds */
+	                }
+	            });
+	        }
+
+	        $(document).ready(function(){
+	            waitForMsg(); /* Start the inital request */
+	        });
+	    </script>
+	</head>
+	<body>
+		<div id="messages">
+		    <div class="msg old">
+		        Long-polled message requester!
+		    </div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>test</title>
+		<script type="text/javascript" src="assets/js/jquery.js"></script>
+	</head>
+	<body>
+		
+	</body>
+	<script type="text/javascript">
+		$('#start').click(function() {
+			if ($('#name1').not(':empty') && $('#class1').not(':empty') && $('#name2').not(':empty') && $('#class2').not(':empty')) {
+				$.$.post('/path/to/file', param1: 'value1', function(data, textStatus, xhr) {
+					/*optional stuff to do after success */
+				});
+			}
+		});
+
+		$('#player1 .action').click(function() {
+
+			$.post('index.php', {
+				attaquant: $('#id1').val(),
+				action: $('#player1 .action').attr('name');,
+				enemy: $('#id2').val(),
+			}, function(data) {
+				if ($('#player1 .health').html != data[1][health_point]){
+					$('#player1 .health').html(data.1.health_point);
+				}
+
+				if ($('#player1 .strength').html != data.1.strength){
+					$('#player1 .strength').html(data.1.strength);
+				}
+
+				if ($('#player1 .intelligence').html != data.1.strength) {
+					$('#player1 .intelligence').html(data.1.strength);
+				}
+
+				if ($('#player2 .health').html != data.2.health_point) {
+					$('#player2 .health').html(data.2.health_point);
+				}
+
+				if ($('#player2 .strength').html != data.2.strength) {
+					$('#player2 .strength').html(data.2.strength);
+				}
+
+				if ($('#player2 .intelligence').html != data.2.intelligence) {
+					$('#player2 .intelligence').html(data.2.intelligence);
+				}
+			});
+		});
+
+		$('#player2 .action').click(function() {
+
+			$.post('index.php', {
+				attaquant: $('#id2').val(),
+				action: $('#player2 .action').attr('name');,
+				enemy: $('#id1').val(),
+			}, function(data) {
+				if ($('#player2 .health').html != data.1.health_point){
+					$('#player2 .health').html(data.1.health_point);
+				}
+
+				if ($('#player2 .strength').html != data.1.strength){
+					$('#player2 .strength').html(data.1.strength);
+				}
+
+				if ($('#player2 .intelligence').html != data.1.strength) {
+					$('#player2 .intelligence').html(data.1.strength);
+				}
+
+				if ($('#player1 .health').html != data.2.health_point) {
+					$('#player1 .health').html(data.2.health_point);
+				}
+
+				if ($('#player1 .strength').html != data.2.strength) {
+					$('#player1 .strength').html(data.2.strength);
+				}
+
+				if ($('#player1 .intelligence').html != data.2.intelligence) {
+					$('#player1 .intelligence').html(data.2.intelligence);
+				}
+			});
+		});
+
+	</script>
+</html>
